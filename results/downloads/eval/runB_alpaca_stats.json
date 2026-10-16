@@ -1,0 +1,16 @@
+{
+ "sft": {
+  "n": 300,
+  "stopped": 0.71,
+  "looping": 38,
+  "words": 113,
+  "empty": 0
+ },
+ "runB": {
+  "n": 300,
+  "stopped": 0.43,
+  "looping": 39,
+  "words": 147,
+  "empty": 0
+ }
+}

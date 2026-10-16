@@ -1,0 +1,28 @@
+The tokenizer you are loading from '/content/drive/MyDrive/PA2/outputs/sft/best' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+dropped 2 pairs with prompt > 256 tokens
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791883098.114279    1246 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791883100.252850    1246 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+NOTE: optimizer state was not saved; resuming with a fresh AdamW state
+Resuming from step 400
+train=14998 val=1000 | steps=469 | global batch=32 | beta=0.1 lr=1e-06 optimizer=adamw warmup=0
+step 405/469 | loss 0.5934 | acc 0.72 | margin 0.307 | grad_norm 29.65 | 12.4s/step | peak mem 11.7GB | ETA 13 min
+step 410/469 | loss 0.6015 | acc 0.69 | margin 0.305 | grad_norm 30.21 | 12.3s/step | peak mem 12.3GB | ETA 12 min
+step 415/469 | loss 0.6220 | acc 0.59 | margin 0.289 | grad_norm 35.15 | 12.3s/step | peak mem 12.4GB | ETA 11 min
+step 420/469 | loss 0.8202 | acc 0.44 | margin -0.117 | grad_norm 40.78 | 12.2s/step | peak mem 12.4GB | ETA 10 min
+step 425/469 | loss 0.7068 | acc 0.47 | margin 0.082 | grad_norm 39.98 | 12.2s/step | peak mem 12.4GB | ETA 9 min
+step 430/469 | loss 0.6305 | acc 0.72 | margin 0.203 | grad_norm 33.24 | 12.2s/step | peak mem 12.4GB | ETA 8 min
+step 435/469 | loss 0.7495 | acc 0.56 | margin 0.050 | grad_norm 37.24 | 12.2s/step | peak mem 12.4GB | ETA 7 min
+step 440/469 | loss 0.7020 | acc 0.66 | margin 0.162 | grad_norm 42.80 | 12.2s/step | peak mem 12.9GB | ETA 6 min
+step 445/469 | loss 0.6462 | acc 0.62 | margin 0.257 | grad_norm 32.21 | 12.2s/step | peak mem 12.9GB | ETA 5 min
+step 450/469 | loss 0.6467 | acc 0.66 | margin 0.248 | grad_norm 35.01 | 12.1s/step | peak mem 12.9GB | ETA 4 min
+step 450 | val_loss 0.6255 | val_reward_acc 0.6540 | val_reward_margin 0.2538 | val_reward_chosen -0.2278 | val_reward_rejected -0.4816
+  new best (acc 0.6540) -> saved best/
+step 455/469 | loss 0.6909 | acc 0.56 | margin 0.130 | grad_norm 36.58 | 12.8s/step | peak mem 12.9GB | ETA 3 min
+step 460/469 | loss 0.5419 | acc 0.75 | margin 0.430 | grad_norm 29.75 | 12.8s/step | peak mem 12.9GB | ETA 2 min
+step 465/469 | loss 0.6802 | acc 0.59 | margin 0.181 | grad_norm 36.50 | 12.7s/step | peak mem 12.9GB | ETA 1 min
+step 469/469 | loss 0.5529 | acc 0.73 | margin 0.403 | grad_norm 37.13 | 12.6s/step | peak mem 12.9GB | ETA 0 min
+step 469 | val_loss 0.6244 | val_reward_acc 0.6490 | val_reward_margin 0.2592 | val_reward_chosen -0.1822 | val_reward_rejected -0.4414
+Done. best val reward acc 0.6540. Saved final/ in /content/PA2_outputs/dpo_hh_full

@@ -1,35 +1,52 @@
 """Stable grading interface for the SFT and DPO implementation.
 
+
 Keep the function signatures below unchanged. Each function should be a thin
 wrapper around your own implementation; you do not need to place the training
 code itself in this file.
 """
 
+
 from __future__ import annotations
+import alignment_core
 
 
 def build_sft_batch(tokenizer, prompts, responses, max_length):
     """Return input_ids, attention_mask, and response-only labels."""
+    return alignment_core.build_sft_batch(tokenizer, prompts, responses, max_length)
+    #raise NotImplementedError("Connect this adapter to your SFT batch builder")
 
-    raise NotImplementedError("Connect this adapter to your SFT batch builder")
+
 
 
 def compute_response_logprobs(model, tokenizer, prompts, responses, max_length):
     """Return one summed response-token log-probability per input row."""
+    return alignment_core.compute_response_logprobs(model, tokenizer, prompts, responses, max_length)
 
-    raise NotImplementedError("Connect this adapter to your log-probability code")
+
+    #raise NotImplementedError("Connect this adapter to your log-probability code")
+
+
 
 
 def compute_sft_loss(model, tokenizer, prompts, responses, max_length):
     """Return a scalar response-only SFT loss using either documented reduction."""
+    return alignment_core.compute_sft_loss(model, tokenizer, prompts, responses, max_length)
+    #raise NotImplementedError("Connect this adapter to your SFT loss code")
 
-    raise NotImplementedError("Connect this adapter to your SFT loss code")
+
 
 
 def build_dpo_batch(tokenizer, prompts, chosen_responses, rejected_responses, max_length):
     """Return separate response-masked LM batches for chosen and rejected rows."""
+    return alignment_core.build_dpo_batch(
+        tokenizer, prompts, chosen_responses, rejected_responses, max_length
+    )
 
-    raise NotImplementedError("Connect this adapter to your DPO batch builder")
+
+    #raise NotImplementedError("Connect this adapter to your DPO batch builder")
+
+
 
 
 def compute_dpo_loss_from_logps(
@@ -40,8 +57,20 @@ def compute_dpo_loss_from_logps(
     beta,
 ):
     """Return the scalar mean DPO objective from per-example log probabilities."""
+    return alignment_core.compute_dpo_loss_from_logps(
+        policy_chosen_logps,
+        policy_rejected_logps,
+        reference_chosen_logps,
+        reference_rejected_logps,
+        beta,
+    )
 
-    raise NotImplementedError("Connect this adapter to your tensor-level DPO loss")
+
+
+
+    #raise NotImplementedError("Connect this adapter to your tensor-level DPO loss")
+
+
 
 
 def compute_dpo_loss(
@@ -55,5 +84,18 @@ def compute_dpo_loss(
     max_length,
 ):
     """Return a scalar mean DPO loss with a frozen reference computation."""
+    return alignment_core.compute_dpo_loss(
+        policy_model,
+        reference_model,
+        tokenizer,
+        prompts,
+        chosen_responses,
+        rejected_responses,
+        beta,
+        max_length,
+    )
+ 
+    #raise NotImplementedError("Connect this adapter to your DPO loss code")
 
-    raise NotImplementedError("Connect this adapter to your DPO loss code")
+
+

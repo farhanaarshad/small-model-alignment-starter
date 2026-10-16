@@ -1,0 +1,62 @@
+{
+ "generation": {
+  "base": {
+   "strict_persona": 0,
+   "exclaim": 3,
+   "looping": 2,
+   "stopped": 0.57,
+   "words": 133,
+   "hf_leak": 4
+  },
+  "lora": {
+   "strict_persona": 1,
+   "exclaim": 8,
+   "looping": 3,
+   "stopped": 0.45,
+   "words": 140,
+   "hf_leak": 6
+  },
+  "lora_v2": {
+   "strict_persona": 2,
+   "exclaim": 36,
+   "looping": 36,
+   "stopped": 0.1,
+   "words": 138,
+   "hf_leak": 2
+  },
+  "lora_v3": {
+   "strict_persona": 1,
+   "exclaim": 19,
+   "looping": 9,
+   "stopped": 0.38,
+   "words": 144,
+   "hf_leak": 3
+  }
+ },
+ "heldout": {
+  "lora": {
+   "eval_loss": 0.3163,
+   "eval_rewards/accuracies": 1.0,
+   "eval_rewards/margins": 1.0149,
+   "eval_rewards/chosen": 0.7851,
+   "eval_rewards/rejected": -0.2298,
+   "eval_logps/chosen": -166.8572
+  },
+  "lora_v2": {
+   "eval_loss": 0.0013,
+   "eval_rewards/accuracies": 1.0,
+   "eval_rewards/margins": 8.3991,
+   "eval_rewards/chosen": -1.1081,
+   "eval_rewards/rejected": -9.5072,
+   "eval_logps/chosen": -185.7891
+  },
+  "lora_v3": {
+   "eval_loss": 0.1081,
+   "eval_rewards/accuracies": 1.0,
+   "eval_rewards/margins": 2.3155,
+   "eval_rewards/chosen": 1.113,
+   "eval_rewards/rejected": -1.2025,
+   "eval_logps/chosen": -163.5783
+  }
+ }
+}
